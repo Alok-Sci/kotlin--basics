@@ -1,0 +1,14 @@
+.gradle/
+build/
+out/
+.idea/
+*.iml
+
+# Kotlin
+.kotlin/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
