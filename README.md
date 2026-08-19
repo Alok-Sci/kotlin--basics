@@ -28,10 +28,20 @@ The order will generally follow this path:
 14. Object features
 15. Inheritance and interfaces
 16. Exceptions
-17. Collections practice
-18. Higher-order functions
-19. Practice problems 
-20. Bonus syntax and “secret” details
+17. Equality, Type Checks and Casting
+18. Advanced Functions and Operators
+19. Higher-order functions
+20. Collections Advanced
+21. Scope Functions
+22. Extension Functions
+23. Generics
+24. Delegation
+25. Sequences
+26. Inline Functions & Reified Generics
+27. Type Aliases
+28. Coroutines and Flow
+29. Practice problems
+30. Bonus syntax and "secret" details
 
 ## Project structure
 
@@ -59,7 +69,18 @@ app/src/main/kotlin/
 ├── objects/
 ├── inheritance/
 ├── exceptions/
+├── equality_and_casting/
+├── advanced_functions/
 ├── higher_order_functions/
+├── collections_advanced/
+├── scope_functions/
+├── extension_functions/
+├── generics/
+├── delegation/
+├── sequences/
+├── inline_functions/
+├── type_aliases/
+├── coroutines/
 ├── practice/
 └── bonus/
 ```
@@ -149,7 +170,6 @@ Each folder will contain small `.kt` files focused on one concept.
 
 ## 10) Functions
 - basic_functions.kt
-- parameters.kt
 - return_values.kt
 - default_arguments.kt
 - named_arguments.kt
@@ -195,13 +215,27 @@ Each folder will contain small `.kt` files focused on one concept.
 - throw_exception.kt
 - custom_exception.kt
 
-## 17) Higher-order functions
+## 17) Equality, Type Checks and Casting
+- structural_vs_referential_equality.kt (== vs ===)
+- equals_and_hashcode_basics.kt (why data classes auto-generate these)
+- is_operator_type_checks.kt
+- smart_casts.kt
+- safe_cast_as_and_as_safe.kt (as vs as?)
+
+## 18) Advanced Functions and Operators
+- varargs_functions.kt
+- infix_functions.kt (the mechanism behind to, until, step)
+- local_functions.kt
+- operator_overloading_basics.kt
+- labeled_breaks_and_returns.kt
+
+## 19) Higher-order functions
 - lambdas.kt
 - function_types.kt
 - higher_order_functions.kt
 - anonymous_functions.kt
 
-## 18) Collections practice
+## 20) Collections Advanced
 - filter.kt
 - map.kt
 - reduce.kt
@@ -210,7 +244,69 @@ Each folder will contain small `.kt` files focused on one concept.
 - groupBy.kt
 - sorted.kt
 
-## 19) Practice problems
+## 21) Scope Functions
+(comes after Higher-Order Functions since these are all just specialized lambda receivers)
+- let_function.kt
+- run_function.kt
+- with_function.kt
+- apply_function.kt
+- also_function.kt
+- scope_functions_comparison.kt (side-by-side notes on when to use which)
+
+## 22) Extension Functions
+- extension_function_basics.kt
+- extension_function_on_string.kt
+- extension_function_on_custom_class.kt
+- extension_property_basics.kt
+- extension_function_with_receiver_lambda.kt (ties back to scope functions)
+
+## 23) Generics
+(needs classes/interfaces from OOP + Inheritance, sections 12 & 15)
+- generic_function_basics.kt
+- generic_class_basics.kt
+- multiple_type_parameters.kt
+- type_constraints_bounds.kt
+- in_out_variance_basics.kt
+
+## 24) Delegation
+(property delegation needs lambdas; class delegation needs interfaces)
+- property_delegation_by_lazy.kt
+- observable_delegate.kt
+- class_delegation_by_interface.kt
+- map_as_delegate.kt
+
+## 25) Sequences
+(builds on Collections + Collections Practice)
+- sequence_basics.kt
+- sequence_vs_list_performance.kt
+- sequence_chained_operations.kt
+
+## 26) Inline Functions & Reified Generics
+(needs Higher-Order Functions + Generics)
+- inline_function_basics.kt
+- noinline_and_crossinline.kt
+- reified_generic_type_check.kt
+
+## 27) Type Aliases
+- type_alias_basics.kt
+- type_alias_for_function_type.kt
+
+## 28) Coroutines and Flow
+(the most advanced section — placed last, right before practice problems)
+- suspend_function_basics.kt
+- runblocking_basics.kt
+- launch_builder.kt
+- async_await_builder.kt
+- dispatchers_basics.kt
+- coroutine_scope_basics.kt
+- job_and_cancellation.kt
+- delay_vs_thread_sleep.kt
+- flow_basics.kt
+- flow_operators_map_filter.kt
+- stateflow_basics.kt
+- sharedflow_basics.kt
+
+## 29) Practice problems
 - calculator.kt
 - evenodd_checker.kt
 - prime_checker.kt
@@ -222,7 +318,7 @@ Each folder will contain small `.kt` files focused on one concept.
 - simple_bank_account.kt
 - number_guessing_game.kt
 
-## 20) Bonus syntax and “secret” details
+## 30) Bonus syntax and “secret” details
 - numeric_underscores.kt
 - literals_suffixes.kt
 - top_level_functions.kt
